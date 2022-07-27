@@ -16,11 +16,13 @@ function App() {
     <Router>
     <div className="App">
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+        <div className={darkMode ? 'main-dark' : 'main'}>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/family1' element={<Family1/>}/>
             <Route path='/family2' element={<Family2/>}/>
         </Routes>
+        </div>
     </div>
     </Router>
   )

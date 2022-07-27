@@ -10,6 +10,15 @@ body{
   margin: 0px;
   padding: 0px;
 }
-.ok{
-  background-color:black;
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.main{
+  flex: 1 1 auto;
+}
+.main-dark{
+  flex: 1 1 auto;
+  background-color: #282D35;
 }
