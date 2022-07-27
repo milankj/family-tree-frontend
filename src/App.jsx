@@ -33,8 +33,8 @@ function App() {
         <div className={darkMode ? 'main-dark' : 'main'}>
           <Routes>
             <Route path='/' element={<Home familyNames={familyNames}/>} />
-            <Route path='/family1' element={<Family1 />} />
-            <Route path='/family2' element={<Family2 />} />
+            <Route path='/karimbil' element={<Family1 />} />
+            <Route path='/thottathparambil' element={<Family2 />} />
           </Routes>
         </div>
       </div>

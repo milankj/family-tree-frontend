@@ -2,9 +2,6 @@ main{
     margin-top: 25vh;
     position: relative;
 }
-.home-page{
-    
-}
 .pushable {
     /* width: 50%;
     margin-left: 25%;
@@ -19,6 +16,9 @@ main{
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
+}
+.home-page-link:hover{
+    text-decoration: none;
 }
 .btn-1{
     margin-bottom: 10vh;
