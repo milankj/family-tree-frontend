@@ -2,7 +2,7 @@ import React from 'react'
 
 function Family1() {
   return (
-    <div>Family1</div>
+    <div>Family 1</div>
   )
 }
 
