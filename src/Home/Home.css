@@ -1,0 +1,45 @@
+/* .home-page{
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin: auto;
+} */
+
+.home-page{
+    margin-top: 25vh;
+}
+.pushable {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background: hsl(104, 88%, 23%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.btn-1{
+    margin-bottom: 10vh;
+}
+.front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background:#52ce14;
+    color: white;
+    transform: translateY(-6px);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+    border: none;
+}
+button:focus {
+    outline: 0;
+}
