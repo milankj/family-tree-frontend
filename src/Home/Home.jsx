@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './Home.css'
 function Home() {
   return (
-    <div className='home-page'>
+    <main className='home-page'>
       <Link 
         className="home-page-link" 
         to="/family1">
@@ -24,7 +24,7 @@ function Home() {
               Family 2</span>
         </button>
       </Link>
-    </div>
+    </main>
   )
 }
 

@@ -1,8 +1,15 @@
-body {
+body{
   font-family: 'Inter', sans-serif;
+}
+.body-dark{
+  font-family: 'Inter', sans-serif;
+  background-color: #282D35;
 }
 
 * {
   margin: 0px;
   padding: 0px;
+}
+.ok{
+  background-color:black;
 }

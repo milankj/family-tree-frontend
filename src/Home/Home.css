@@ -8,8 +8,10 @@
         margin: auto;
 } */
 
-.home-page{
+main{
     margin-top: 25vh;
+    position: relative;
+   
 }
 .pushable {
     width: 50%;
