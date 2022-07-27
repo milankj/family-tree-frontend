@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import './Nav.css'
 
 function Nav(props) {
-    console.log('darkmode :',props.darkMode)
     return (
         <nav className={props.darkMode ? "dark": ""}>
             <img 

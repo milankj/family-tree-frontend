@@ -7,7 +7,7 @@ import Family2 from './Family2/Family2'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   const [darkMode, setDarkMode] = useState(false)
-  const [familyName, setFamilyName] = useState([])
+  const [familyNames, setFamilyNames] = useState([])
   useEffect(() => {
     fetch(`https://familytree2api.herokuapp.com/api/v1/family`)
       .then((response) => {
@@ -18,24 +18,21 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => setFamilyName(data.result))
+      .then((data) => setFamilyNames(data.result))
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
-  console.log(familyName)
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)
   }
-
-
   return (
     <Router>
       <div className="App">
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <div className={darkMode ? 'main-dark' : 'main'}>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home familyNames={familyNames}/>} />
             <Route path='/family1' element={<Family1 />} />
             <Route path='/family2' element={<Family2 />} />
           </Routes>
