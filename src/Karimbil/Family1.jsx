@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Card from '../Card/Card'
 function Family1(props) {
-  console.log(props.familyName)
   return (
-    <div>Family 1</div>
+    <div>
+      <Card familyName='Karimbil'/>
+    </div>
   )
 }
 
