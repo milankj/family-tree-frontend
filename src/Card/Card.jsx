@@ -26,11 +26,12 @@ export default function Card(props) {
     console.log(users)
     return (
         users.map(user => {
+            console.log(user.gender)
             if(user.familyName===props.familyName)
             return (
                 <main onClick={handleOnclick} className='card-main'>
                     <article className="card">
-                        <img src="https://cdn-icons.flaticon.com/png/128/1144/premium/1144709.png?token=exp=1659624311~hmac=dab39502f1b252a8ee9de4cb42a85757" className="card--image" />
+                        {user.gender==='male' ? <img src="../../image/man-profile-icon.png" className="card--image" /> : <img src="../../image/woman-profile-icon.png" className="card--image" />}
                         <div className="card--info">
                             <h3 className="card--name">
                                 {user.fullName}
