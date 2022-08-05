@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation,Outlet } from 'react-router-dom'
 export default function Person(props) {
     const [user, setUser] = useState([])
     useEffect(() => {
@@ -22,13 +22,14 @@ export default function Person(props) {
     return (
         user.map(obj=>{
             return(
-                <div key={obj._id}>
+                <div key={obj._id} className='personal-details'>
                     <h3>Name: {obj.fullName}</h3>
                     <p>Date of Birth: {obj.dateofBirth}</p>
                     <p>Family Name: {obj.familyName}</p>
                     {obj.dateofMarriage==='N/A'? null : <p>Date of Marriage: {obj.dateofMarriage}</p>}
                     {obj.dateofDeath==='N/A'? null : <p>Date of Death: {obj.dateofDeath}</p>}
                     {obj.spouse==='N/A'? null : <p>Spouse: {obj.spouse}</p>}
+                    <Outlet/>
                 </div>
             )
         })

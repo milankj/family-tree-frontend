@@ -1,29 +1,27 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Home.css'
-function Home({familyNames}) {
+function Home({ familyNames }) {
   console.log(familyNames)
-  familyNames.map((familyName,index)=>{
-    console.log( index+' '+familyName.familyName)
+  familyNames.map((familyName, index) => {
+    console.log(index + ' ' + familyName.familyName)
   })
+  
   return (
     <main className='home-page'>
-      {familyNames.map(familyName=>{
-          return(
-            <Link 
-        className="home-page-link" 
-        to={`/${familyName.familyName}`} key={familyName._id}>
-          <button 
-            className=' btn-1 pushable'>
-              <span 
+        {familyNames.map(familyName => {
+          return(<Link
+            className="home-page-link"
+            to={`/${familyName.familyName}`} key={familyName._id}>
+            <button
+              className=' btn-1 pushable'>
+              <span
                 className='front'>
-                  {familyName.familyName}
+                {familyName.familyName}
               </span>
-          </button>
-      </Link>
-          )
-      })}
-      
+            </button>
+          </Link>)
+        })}
     </main>
   )
 }

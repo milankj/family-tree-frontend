@@ -23,3 +23,28 @@ body{
   background-color: #282D35;
   color: white;
 }
+.upcoming--details {
+  border: 1px solid;
+  width: 300px;
+  height: 350px;
+  float: right;
+  margin-right: 2%;
+  margin-top: 5%;
+  overflow-y: scroll;
+}
+.upcoming--header{
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(58, 202, 58);
+  color: white;
+  
+}
+.single-news{
+  border-bottom: 1px solid;
+  padding: 10px;
+  font-size: 16px;
+}
+.personal-details{
+  text-align: center;
+}

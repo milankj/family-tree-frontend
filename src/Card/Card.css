@@ -2,8 +2,7 @@
     display: inline-block;
     justify-content: flex-start;
     margin-left: 4em;
-    cursor: pointer;
-    align-items: center                                                                                       ;
+    cursor: pointer;                                                                                       ;
 }
 
 .card {

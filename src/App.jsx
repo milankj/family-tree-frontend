@@ -5,7 +5,7 @@ import Home from './Home/Home'
 import Family1 from './Karimbil/Family1'
 import Family2 from './Family2/Family2'
 import Person from './Person/Person'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 function App() {
   const [darkMode, setDarkMode] = useState(false)
   const [familyNames, setFamilyNames] = useState([])
@@ -27,6 +27,7 @@ function App() {
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)
   }
+  console.log(familyNames)
   return (
     <Router>
       <div className="App">
@@ -36,7 +37,7 @@ function App() {
             <Route path='/' element={<Home familyNames={familyNames}/>} />
             <Route path='/karimbil' element={<Family1 />} />
             <Route path='/thottathparambil' element={<Family2 />} />
-            <Route path='/person' element={<Person/>}/>
+            <Route path={`/:familyname/person`}element={<Person/>}/>
           </Routes>
         </div>
       </div>
