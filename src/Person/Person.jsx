@@ -28,6 +28,7 @@ export default function Person(props) {
                     <p>Family Name: {obj.familyName}</p>
                     {obj.dateofMarriage==='N/A'? null : <p>Date of Marriage: {obj.dateofMarriage}</p>}
                     {obj.dateofDeath==='N/A'? null : <p>Date of Death: {obj.dateofDeath}</p>}
+                    {obj.spouse==='N/A'? null : <p>Spouse: {obj.spouse}</p>}
                 </div>
             )
         })
