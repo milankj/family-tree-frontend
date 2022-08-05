@@ -12,7 +12,7 @@ function Home({familyNames}) {
           return(
             <Link 
         className="home-page-link" 
-        to={`/${familyName.familyName}`}>
+        to={`/${familyName.familyName}`} key={familyName._id}>
           <button 
             className=' btn-1 pushable'>
               <span 

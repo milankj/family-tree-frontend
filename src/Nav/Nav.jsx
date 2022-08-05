@@ -1,14 +1,26 @@
 import React,{useState} from 'react'
+import { useNavigate} from 'react-router-dom'
 import './Nav.css'
 
 function Nav(props) {
+
+    const navigate = useNavigate()
+    const handleClick =  ()=>{  
+        navigate(`/`)
+    }
     return (
         <nav className={props.darkMode ? "dark": ""}>
             <img 
                 className='nav--logo'
                 src="https://png.pngtree.com/template/20190214/ourmid/pngtree-family-tree-symbol-icon-logo-design-template-illustration-image_55356.jpg"
-                 alt='logo'/>
-            <h3 className='nav--text'>Family Tree</h3>
+                alt='logo' 
+                onClick={handleClick}
+                style={{cursor:'pointer'}}/>
+            <h3 
+                className='nav--text' 
+                onClick={handleClick} 
+                style={{cursor:'pointer'}}
+                >Family Tree</h3>
             <div 
                 className="toggler" 
             >

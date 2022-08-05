@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import './Card.css'
 export default function Card(props) {
 
@@ -20,16 +20,15 @@ export default function Card(props) {
             });
     }, []);
     const navigate = useNavigate()
-    const handleOnclick =  ()=>{
-        navigate(`/person`)
+    const handleOnclick =  (id)=>{
+        navigate(`/person?_id=${id}`)
     }
     console.log(users)
     return (
         users.map(user => {
-            console.log(user.gender)
             if(user.familyName===props.familyName)
             return (
-                <main onClick={handleOnclick} className='card-main'>
+                <main onClick={()=>{handleOnclick(user._id)}} key={user._id} className='card-main'>
                     <article className="card">
                         {user.gender==='male' ? <img src="../../image/man-profile-icon.png" className="card--image" /> : <img src="../../image/woman-profile-icon.png" className="card--image" />}
                         <div className="card--info">
@@ -40,9 +39,9 @@ export default function Card(props) {
                             <p className="card--contact">{user.dateofDeath === 'N/A' ? null : user.dateofDeath}</p>
                             {/* <p className="card--contact">{user.dateofMarriage === 'N/A' ? null : 'Marriage: '+user.dateofMarriage}</p> */}
                         </div>
-
                     </article>
                 </main>
+            
             )
         })
     )
