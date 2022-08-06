@@ -28,9 +28,9 @@ export default function Person(props) {
                     <p>Date of Birth: {obj.dateofBirth}</p>
                     <p>Family Name: {obj.familyName}</p>
                     <p>Place of Residence: {obj.residencePlace}</p>
-                    {obj.dateofMarriage==='N/A' || obj.dateofMarriage==='n/a'? null : <p>Date of Marriage: {obj.dateofMarriage}</p>}
-                    {obj.dateofDeath==='N/A' || obj.dateofDeath==='n/a'? null : <p>Date of Death: {obj.dateofDeath}</p>}
-                    {obj.spouse==='N/A' || obj.spouse==='n/a'? null : <p>Spouse: {obj.spouse}</p>}
+                    {obj.dateofMarriage==='N/A' || obj.dateofMarriage==='n/a' || obj.dateofMarriage==='N/a'? null : <p>Date of Marriage: {obj.dateofMarriage}</p>}
+                    {obj.dateofDeath==='N/A' || obj.dateofDeath==='n/a' || obj.dateofDeath==='N/a'? null : <p>Date of Death: {obj.dateofDeath}</p>}
+                    {obj.spouse==='N/A' || obj.spouse==='n/a' || obj.spouse==='N/a'? null : <p>Spouse: {obj.spouse}</p>}
                     <Outlet/>
                 </div>
             )
