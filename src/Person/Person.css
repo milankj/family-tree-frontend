@@ -1,0 +1,12 @@
+.personal-details {
+    
+    border: 1px solid;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 50vh;
+    padding: 20px;
+    margin-top: 20vh;
+    border-radius: 15px;
+    border-color: #95ca15;
+}
