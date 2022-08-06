@@ -19,7 +19,7 @@ export default function Card(props) {
                         {props.fullName}
                     </h3>
                     <p className="card--contact">DOB: {props.dateofBirth}</p>
-                    {props.dateofDeath === 'N/A' ? null: <p className="card--contact">DOD : {props.dateofDeath}</p>}
+                    {props.dateofDeath === 'N/A' || props.dateofDeath === 'n/a' || props.dateofDeath === 'N/a' ? null: <p className="card--contact">DOD : {props.dateofDeath}</p>}
                     {/* <p className="card--contact">{user.dateofMarriage === 'N/A' ? null : 'Marriage: '+user.dateofMarriage}</p> */}
                 </div>
             </article>
