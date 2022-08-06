@@ -4,7 +4,7 @@ import Upcoming from '../Upcoming/Upcoming'
 function Family1(props) {
   const [users, setUsers] = useState([])
   useEffect(() => {
-    fetch(`https://familytree2api.herokuapp.com/api/v1/users`)
+    fetch(`https://familytree2api.herokuapp.com/api/v1/users?sort=fullName`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(
