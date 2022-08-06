@@ -13,7 +13,7 @@ export default function Card(props) {
         <Link to={`${location.pathname}/person?_id=${props._id}`}>
         <main  key={props._id} className='card-main'>
             <article className="card">
-                {props.gender === 'male' ? <img src="../../image/man-profile-icon.png" className="card--image" /> : <img src="../../image/woman-profile-icon.png" className="card--image" />}
+                {props.gender === 'male' || props.gender==='Male'? <img src="../../image/man-profile-icon.png" className="card--image" /> : <img src="../../image/woman-profile-icon.png" className="card--image" />}
                 <div className="card--info">
                     <h3 className="card--name">
                         {props.fullName}
