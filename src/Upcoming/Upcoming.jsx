@@ -9,7 +9,6 @@ export default function Upcoming(props) {
     const recentBirth = () => {
         let inputMonth = props.dateofBirth.replace(/[^a-zA-Z]/g, "")
         let inputDate = parseInt(props.dateofBirth.slice(-2))
-        console.log(props.dateofBirth.slice(-2))
         const textColor = {color : currentdate <= inputDate ? currentdate === inputDate ? "red" : "DodgerBlue" : "#918E9B"}
         console.log('Color: ',textColor)
         if (inputMonth != 'N/A') {
@@ -23,7 +22,6 @@ export default function Upcoming(props) {
     }
     const recentDeath = () => {
         let inputDate = parseInt(props.dateofDeath.slice(-2))
-        console.log(props.dateofDeath.slice(-2))
         const textColor = {color : currentdate <= inputDate ? currentdate === inputDate ? "red" : "DodgerBlue" : "#918E9B"}
         let inputMonth = props.dateofDeath.replace(/[^a-zA-Z]/g, "")
         if (inputMonth != 'N/A') {
@@ -38,7 +36,6 @@ export default function Upcoming(props) {
     }
     const recentMarriage = () => {
         let inputDate = parseInt(props.dateofMarriage.slice(-2))
-        console.log(props.dateofMarriage.slice(-2))
         const textColor = {color : currentdate <= inputDate ? currentdate === inputDate ? "red" : "DodgerBlue" : "#918E9B"}
         let inputMonth = props.dateofMarriage.replace(/[^a-zA-Z]/g, "")
         if (inputMonth != 'N/A') {
