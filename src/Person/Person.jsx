@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation,Outlet } from 'react-router-dom'
 import './Person.css'
+import axios from 'axios'
 export default function Person(props) {
     const [user, setUser] = useState([])
-    useEffect(() => {
-        fetch(`https://familytree2api.herokuapp.com/api/v1/users${location.search}`)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(
-                        `This is an HTTP error: The status is ${response.status}`
-                    );
-                }
-                return response.json();
-            })
-            .then((data) => setUser(data.result))
-            .catch((err) => {
-                console.log(err.message);
-            });
-    },[]);
     const location = useLocation()
-    console.log(user)
+    useEffect(()=>{
+        axios.get(`https://familytree2api.herokuapp.com/api/v1/users${location.search}`)
+      .then(res=>{
+        console.log('axios out: ',res.data.result)
+        setUser(res.data.result)
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+    },[])
+    console.log(`person: ${user}`)
     return (
         user.map(obj=>{
             return(
