@@ -6,9 +6,10 @@ import Family1 from './Karimbil/Family1'
 import Family2 from './Family2/Family2'
 import Person from './Person/Person'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Loader from './Loader/Loader'
 function App() {
   const [darkMode, setDarkMode] = useState(false)
-  const [familyNames, setFamilyNames] = useState([])
+  const [familyNames, setFamilyNames] = useState(null)
   const [users, setUsers] = useState([])
   useEffect(() => {
     fetchFamily()
@@ -55,7 +56,7 @@ function App() {
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <div className={darkMode ? 'main-dark' : 'main'}>
           <Routes>
-            <Route path='/' element={<Home familyNames={familyNames} />} />
+            <Route path='/' element={familyNames===null ?<Loader/> :<Home familyNames={familyNames} />} />
             <Route path='/karimbil' element={<Family1 users={users}/>} />
             <Route path='/thottathparambil' element={<Family2 users={users}/>} />
             <Route path={`/:familyname/person`} element={<Person/>} />
