@@ -8,6 +8,7 @@ A simple Family Calender responsive website.Showing Important dates , place of r
     -Responsive Design 
     -Dynamic Renderign From Hosted Api
     -Data Added through a custom website 
+    -Can Switch to Dark and Light Mode
 [Data Entry Website](https://dataentryfamilytree.herokuapp.com/) 
 
 #Demo
